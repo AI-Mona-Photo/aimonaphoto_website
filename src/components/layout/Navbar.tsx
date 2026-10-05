@@ -41,10 +41,12 @@ export function Navbar() {
         <div className="flex items-center justify-between">
           
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded bg-amber-500 flex items-center justify-center font-serif font-bold text-stone-900 text-xl">
-              M
-            </div>
+          <Link href="/" className="flex items-center gap-2.5">
+            <img 
+              src="/images/logo.png" 
+              alt="Mona Photo Studio" 
+              className="w-10 h-10 object-contain rounded-md"
+            />
             <div className="flex flex-col">
               <span className="font-serif font-semibold text-lg text-stone-50 leading-none">
                 Mona Photo Studio
