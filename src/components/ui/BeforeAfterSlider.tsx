@@ -10,6 +10,8 @@ interface BeforeAfterSliderProps {
   afterImage: string;
   className?: string;
   aspectRatio?: "square" | "portrait" | "video";
+  beforeLabel?: string;
+  afterLabel?: string;
 }
 
 export function BeforeAfterSlider({
@@ -17,6 +19,8 @@ export function BeforeAfterSlider({
   afterImage,
   className,
   aspectRatio = "portrait",
+  beforeLabel = "Before",
+  afterLabel = "After",
 }: BeforeAfterSliderProps) {
   const [sliderPosition, setSliderPosition] = useState(50);
   const [isDragging, setIsDragging] = useState(false);
@@ -85,7 +89,7 @@ export function BeforeAfterSlider({
           sizes="(max-width: 768px) 100vw, 50vw"
         />
         <div className="absolute top-4 left-4 bg-black/60 text-white text-xs font-medium px-2 py-1 rounded backdrop-blur-sm">
-          Before
+          {beforeLabel}
         </div>
       </div>
 
@@ -102,7 +106,7 @@ export function BeforeAfterSlider({
           sizes="(max-width: 768px) 100vw, 50vw"
         />
         <div className="absolute top-4 right-4 bg-emerald-600/90 text-white text-xs font-medium px-2 py-1 rounded backdrop-blur-sm shadow-sm">
-          After (AI)
+          {afterLabel}
         </div>
       </div>
 

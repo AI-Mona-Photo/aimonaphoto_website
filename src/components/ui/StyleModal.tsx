@@ -6,6 +6,7 @@ import { BeforeAfterSlider } from "./BeforeAfterSlider";
 import { buildWhatsAppURL } from "@/lib/whatsapp";
 import { X, MessageCircle, Clock } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useLanguage } from "@/lib/i18n/LanguageContext";
 
 interface StyleModalProps {
   styleData: Style | null;
@@ -14,6 +15,8 @@ interface StyleModalProps {
 }
 
 export function StyleModal({ styleData, isOpen, onClose }: StyleModalProps) {
+  const { language, t } = useLanguage();
+
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = "hidden";
@@ -26,6 +29,10 @@ export function StyleModal({ styleData, isOpen, onClose }: StyleModalProps) {
   }, [isOpen]);
 
   if (!isOpen || !styleData) return null;
+
+  const displayName = language === "mr" && styleData.marathiName ? styleData.marathiName :
+                      language === "hi" && styleData.hindiName ? styleData.hindiName :
+                      styleData.name;
 
   return (
     <AnimatePresence>
@@ -56,20 +63,19 @@ export function StyleModal({ styleData, isOpen, onClose }: StyleModalProps) {
               afterImage={styleData.afterImage}
               aspectRatio="portrait"
               className="h-full object-cover max-h-[50vh] md:max-h-[90vh]"
+              beforeLabel={t("hero.before")}
+              afterLabel={t("hero.after")}
             />
           </div>
 
           <div className="w-full md:w-1/2 p-6 md:p-8 flex flex-col overflow-y-auto">
             <div className="mb-6">
               <div className="text-xs font-bold text-amber-600 tracking-wider uppercase mb-2">
-                {styleData.category} • {styleData.id}
+                {t(`categories.${styleData.category}` as any)} • {styleData.id}
               </div>
               <h2 className="font-serif text-3xl font-medium text-stone-900 mb-2">
-                {styleData.name}
+                {displayName}
               </h2>
-              {styleData.marathiName && (
-                <h3 className="text-xl text-stone-600 mb-4">{styleData.marathiName}</h3>
-              )}
               <p className="text-stone-600 leading-relaxed">
                 {styleData.description}
               </p>
@@ -78,11 +84,11 @@ export function StyleModal({ styleData, isOpen, onClose }: StyleModalProps) {
             <div className="mt-auto pt-6 border-t border-stone-200">
               <div className="flex items-center justify-between mb-6">
                 <div>
-                  <div className="text-sm text-stone-500 mb-1">Price</div>
+                  <div className="text-sm text-stone-500 mb-1">{t("catalog.price")}</div>
                   <div className="text-3xl font-semibold text-stone-900">₹{styleData.price}</div>
                 </div>
                 <div className="text-right">
-                  <div className="text-sm text-stone-500 mb-1">Turnaround</div>
+                  <div className="text-sm text-stone-500 mb-1">{t("catalog.turnaround")}</div>
                   <div className="flex items-center text-stone-900 font-medium">
                     <Clock className="w-4 h-4 mr-1.5 text-stone-500" />
                     {styleData.turnaround}
@@ -91,16 +97,16 @@ export function StyleModal({ styleData, isOpen, onClose }: StyleModalProps) {
               </div>
 
               <a
-                href={buildWhatsAppURL(styleData)}
+                href={buildWhatsAppURL(language, styleData)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white py-4 px-6 rounded-xl font-medium text-lg transition-colors shadow-sm hover:shadow-md"
               >
                 <MessageCircle className="w-6 h-6" />
-                <span>Order on WhatsApp</span>
+                <span>{t("nav.orderWhatsApp")}</span>
               </a>
               <p className="text-xs text-center text-stone-500 mt-4">
-                Clicking will open WhatsApp with a pre-filled message. You can then send us your photo.
+                {t("catalog.modalMsg")}
               </p>
             </div>
           </div>

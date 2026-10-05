@@ -5,8 +5,11 @@ import { BeforeAfterSlider } from "../ui/BeforeAfterSlider";
 import { buildWhatsAppURL } from "@/lib/whatsapp";
 import { MessageCircle, ImageIcon, Zap, IndianRupee, ShieldCheck } from "lucide-react";
 import { motion } from "framer-motion";
+import { useLanguage } from "@/lib/i18n/LanguageContext";
 
 export function Hero() {
+  const { t, language } = useLanguage();
+
   return (
     <section className="relative bg-stone-950 text-stone-50 overflow-hidden pt-24 pb-16 md:pt-32 md:pb-24">
       {/* Background Subtle Pattern or Gradient */}
@@ -25,34 +28,34 @@ export function Hero() {
           >
             <div className="inline-flex items-center space-x-2 bg-stone-800/50 border border-stone-700/50 rounded-full px-3 py-1 w-fit">
               <span className="flex h-2 w-2 rounded-full bg-amber-500 animate-pulse"></span>
-              <span className="text-xs font-semibold tracking-wider uppercase text-amber-500">Paranda&apos;s AI Photo Studio</span>
+              <span className="text-xs font-semibold tracking-wider uppercase text-amber-500">{t("hero.eyebrow")}</span>
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif leading-tight">
-              Turn Your Moments Into <br/>
-              <span className="text-amber-400 italic">Extraordinary Memories</span>
+              {t("hero.title1")} <br/>
+              <span className="text-amber-400 italic">{t("hero.title2")}</span>
             </h1>
 
             <p className="text-lg md:text-xl text-stone-400 max-w-xl leading-relaxed">
-              Professional AI photo editing and creative portraits for babies, weddings, festivals, and professional profiles.
+              {t("hero.desc")}
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <a
-                href={buildWhatsAppURL()}
+                href={buildWhatsAppURL(language)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-4 rounded-xl font-medium text-lg transition-all shadow-lg hover:shadow-emerald-900/20"
               >
                 <MessageCircle className="w-5 h-5" />
-                <span>Order on WhatsApp</span>
+                <span>{t("nav.orderWhatsApp")}</span>
               </a>
               <a
                 href="#styles"
                 className="flex items-center justify-center gap-2 bg-stone-800 hover:bg-stone-700 text-stone-100 px-8 py-4 rounded-xl font-medium text-lg transition-all border border-stone-700"
               >
                 <ImageIcon className="w-5 h-5" />
-                <span>View AI Styles</span>
+                <span>{t("hero.viewStyles")}</span>
               </a>
             </div>
 
@@ -62,25 +65,25 @@ export function Hero() {
                 <span className="flex items-center text-amber-400 font-bold text-lg mb-1">
                   <ImageIcon className="w-4 h-4 mr-1.5" /> 50+
                 </span>
-                <span className="text-xs text-stone-400">AI Styles</span>
+                <span className="text-xs text-stone-400">{t("hero.metrics.styles")}</span>
               </div>
               <div className="flex flex-col">
                 <span className="flex items-center text-amber-400 font-bold text-lg mb-1">
                   <Zap className="w-4 h-4 mr-1.5" /> 2 Hrs
                 </span>
-                <span className="text-xs text-stone-400">Fast Delivery</span>
+                <span className="text-xs text-stone-400">{t("hero.metrics.delivery")}</span>
               </div>
               <div className="flex flex-col">
                 <span className="flex items-center text-amber-400 font-bold text-lg mb-1">
                   <IndianRupee className="w-4 h-4 mr-1.5" /> 99
                 </span>
-                <span className="text-xs text-stone-400">Starting Price</span>
+                <span className="text-xs text-stone-400">{t("hero.metrics.price")}</span>
               </div>
               <div className="flex flex-col">
                 <span className="flex items-center text-amber-400 font-bold text-lg mb-1">
                   <ShieldCheck className="w-4 h-4 mr-1.5" /> UPI
                 </span>
-                <span className="text-xs text-stone-400">Accepted</span>
+                <span className="text-xs text-stone-400">{t("hero.metrics.upi")}</span>
               </div>
             </div>
           </motion.div>
@@ -99,6 +102,8 @@ export function Hero() {
                 afterImage="https://images.unsplash.com/photo-1531384441138-2736e62e0919?auto=format&fit=crop&w=800&q=80"
                 aspectRatio="portrait"
                 className="w-full h-full"
+                beforeLabel={t("hero.before")}
+                afterLabel={t("hero.after")}
               />
             </div>
             

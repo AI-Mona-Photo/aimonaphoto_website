@@ -1,0 +1,298 @@
+export const translations = {
+  en: {
+    nav: {
+      home: "Home",
+      styles: "AI Styles",
+      howItWorks: "How It Works",
+      guide: "Photo Guide",
+      orderWhatsApp: "Order on WhatsApp",
+    },
+    hero: {
+      eyebrow: "Paranda's AI Photo Studio",
+      title1: "Turn Your Moments Into",
+      title2: "Extraordinary Memories",
+      desc: "Professional AI photo editing and creative portraits for babies, weddings, festivals, and professional profiles.",
+      viewStyles: "View AI Styles",
+      metrics: {
+        styles: "AI Styles",
+        delivery: "Fast Delivery",
+        price: "Starting Price",
+        upi: "Accepted",
+      },
+      before: "Before",
+      after: "After (AI)",
+    },
+    catalog: {
+      title: "Popular AI Photo Styles",
+      desc: "Choose a style you love. Send us your photo on WhatsApp. We'll create it for you.",
+      empty: "No styles found in this category right now.",
+      turnaround: "Turnaround",
+      price: "Price",
+      order: "Order",
+      modalMsg: "Clicking will open WhatsApp with a pre-filled message. You can then send us your photo.",
+    },
+    howItWorks: {
+      title: "How It Works",
+      desc: "Simple, fast, and entirely on WhatsApp. No accounts needed.",
+      step1: { title: "Browse Styles", desc: "Look through our catalog and choose your favorite AI photo style." },
+      step2: { title: "Order on WhatsApp", desc: "Click the WhatsApp button to start your order instantly." },
+      step3: { title: "Send Your Photo", desc: "Send us a clear photo of yourself directly on WhatsApp." },
+      step4: { title: "We Create", desc: "Our studio manually applies professional AI transformations." },
+      step5: { title: "Get Your Photo", desc: "Receive your high-quality digital photo ready for sharing or printing." },
+    },
+    guide: {
+      title: "Send Us The Right Photo",
+      desc: "A better input photo gives you a much better AI result. Please follow these simple guidelines.",
+      good: "GOOD",
+      avoid: "AVOID",
+      good1: "Clear face looking directly at the camera",
+      good2: "Good even lighting (no harsh shadows)",
+      good3: "High resolution (not pixelated)",
+      good4: "Multiple photos from different angles (Recommended)",
+      avoid1: "Blurry or shaky images",
+      avoid2: "Wearing sunglasses or face coverings",
+      avoid3: "Side profile or looking away",
+      avoid4: "Very dark photos or heavy filters",
+      note: "Note: We strive for the best results, but AI edits are creative interpretations. Sending 2-3 clear photos of the same person helps us maintain the best possible face consistency.",
+    },
+    testimonials: {
+      title: "Happy Customers",
+      desc: "Trusted by people across Paranda and nearby regions.",
+    },
+    cta: {
+      title: "Ready to Create Your AI Photo?",
+      desc: "Choose your favorite style and order directly on WhatsApp. Quick, easy, and premium quality.",
+      btn: "Start on WhatsApp",
+    },
+    footer: {
+      quickLinks: "Quick Links",
+      services: "Services",
+      visitUs: "Visit Us",
+      msgUs: "Message us",
+      upi: "UPI Accepted Here",
+      rights: "All rights reserved.",
+      designed: "Designed for Paranda",
+    },
+    whatsapp: {
+      defaultMsg: "I am interested in your AI photo services. Please share more details.\n\nThank you.",
+      hello: "Hello Mona Photo Studio,\n\nI want this AI photo style:\n\n",
+      styleId: "Style ID:",
+      style: "Style:",
+      price: "Price shown: ₹",
+      footer: "\n\nI will send my original photo now.\n\nThank you.",
+    },
+    categories: {
+      "All": "All",
+      "Baby & Kids": "Baby & Kids",
+      "Royal": "Royal",
+      "Profession": "Profession",
+      "Wedding": "Wedding",
+      "Festival": "Festival",
+      "Maternity": "Maternity",
+      "Sketch": "Sketch",
+      "Restoration": "Restoration"
+    }
+  },
+  mr: {
+    nav: {
+      home: "मुख्यपृष्ठ",
+      styles: "AI स्टाईल्स",
+      howItWorks: "हे कसे काम करते",
+      guide: "फोटो मार्गदर्शक",
+      orderWhatsApp: "WhatsApp वर ऑर्डर करा",
+    },
+    hero: {
+      eyebrow: "परांड्याचा AI फोटो स्टुडिओ",
+      title1: "तुमचे क्षण बदला",
+      title2: "अविस्मरणीय आठवणींमध्ये",
+      desc: "लहान मुले, लग्न, सण आणि व्यावसायिक प्रोफाइलसाठी प्रोफेशनल AI फोटो एडिटिंग आणि क्रिएटिव्ह पोर्ट्रेट्स.",
+      viewStyles: "AI स्टाईल्स पहा",
+      metrics: {
+        styles: "AI स्टाईल्स",
+        delivery: "जलद सेवा",
+        price: "सुरुवातीची किंमत",
+        upi: "स्वीकारले जाते",
+      },
+      before: "आधी",
+      after: "नंतर (AI)",
+    },
+    catalog: {
+      title: "लोकप्रिय AI फोटो स्टाईल्स",
+      desc: "तुमची आवडती स्टाईल निवडा. तुमचा फोटो आम्हाला WhatsApp वर पाठवा. आम्ही तो तयार करू.",
+      empty: "सध्या या श्रेणीमध्ये कोणतीही स्टाईल उपलब्ध नाही.",
+      turnaround: "वेळ",
+      price: "किंमत",
+      order: "ऑर्डर करा",
+      modalMsg: "क्लिक केल्यावर WhatsApp उघडेल. त्यानंतर तुम्ही आम्हाला तुमचा फोटो पाठवू शकता.",
+    },
+    howItWorks: {
+      title: "हे कसे काम करते",
+      desc: "सोपे, जलद आणि पूर्णपणे WhatsApp वर. कोणतेही खाते आवश्यक नाही.",
+      step1: { title: "स्टाईल्स पहा", desc: "आमच्या कॅटलॉगमधून तुमची आवडती AI फोटो स्टाईल निवडा." },
+      step2: { title: "WhatsApp वर ऑर्डर", desc: "ऑर्डर सुरू करण्यासाठी WhatsApp बटणावर क्लिक करा." },
+      step3: { title: "फोटो पाठवा", desc: "तुमचा स्पष्ट फोटो थेट WhatsApp वर पाठवा." },
+      step4: { title: "आम्ही तयार करू", desc: "आमचा स्टुडिओ व्यावसायिक AI एडिटिंग करेल." },
+      step5: { title: "फोटो मिळवा", desc: "शेअर करण्यासाठी किंवा प्रिंट करण्यासाठी उच्च दर्जाचा फोटो मिळवा." },
+    },
+    guide: {
+      title: "योग्य फोटो पाठवा",
+      desc: "चांगला फोटो दिल्यास AI रिझल्ट अधिक उत्तम मिळतो. कृपया या सोप्या सूचनांचे पालन करा.",
+      good: "योग्य",
+      avoid: "टाळा",
+      good1: "कॅमेऱ्याकडे थेट पाहणारा स्पष्ट चेहरा",
+      good2: "चांगला प्रकाश (चेहऱ्यावर सावली नको)",
+      good3: "हाय रिझोल्युशन (स्पष्ट फोटो)",
+      good4: "वेगवेगळ्या अँगलने काढलेले फोटो (शिफारस केलेले)",
+      avoid1: "अस्पष्ट किंवा हललेले फोटो",
+      avoid2: "गॉगल किंवा चेहरा झाकलेला",
+      avoid3: "बाजूने काढलेला (साईड प्रोफाइल)",
+      avoid4: "खूप अंधार असलेले फोटो",
+      note: "टीप: एकाच व्यक्तीचे २-३ स्पष्ट फोटो पाठवल्यास चेहरा अचूक येण्यास मदत होते.",
+    },
+    testimonials: {
+      title: "आनंदी ग्राहक",
+      desc: "परांडा आणि परिसरातील लोकांचा विश्वास.",
+    },
+    cta: {
+      title: "तुमचा AI फोटो तयार करण्यास उत्सुक आहात?",
+      desc: "तुमची आवडती स्टाईल निवडा आणि थेट WhatsApp वर ऑर्डर करा.",
+      btn: "WhatsApp वर सुरू करा",
+    },
+    footer: {
+      quickLinks: "महत्त्वाच्या लिंक्स",
+      services: "सेवा",
+      visitUs: "पत्ता",
+      msgUs: "मेसेज करा",
+      upi: "येथे UPI स्वीकारले जाते",
+      rights: "सर्व हक्क राखीव.",
+      designed: "परांड्यासाठी डिझाईन केलेले",
+    },
+    whatsapp: {
+      defaultMsg: "मला तुमच्या AI फोटो सर्व्हिसेसबद्दल माहिती हवी आहे. कृपया अधिक तपशील शेअर करा.\n\nधन्यवाद.",
+      hello: "नमस्कार मोना फोटो स्टुडिओ,\n\nमला ही AI फोटो स्टाईल हवी आहे:\n\n",
+      styleId: "स्टाईल आयडी:",
+      style: "स्टाईल:",
+      price: "किंमत: ₹",
+      footer: "\n\nमी माझा फोटो आता पाठवत आहे.\n\nधन्यवाद.",
+    },
+    categories: {
+      "All": "सर्व",
+      "Baby & Kids": "लहान मुले",
+      "Royal": "रॉयल",
+      "Profession": "प्रोफेशन",
+      "Wedding": "लग्न",
+      "Festival": "सण",
+      "Maternity": "मॅटर्निटी",
+      "Sketch": "स्केच",
+      "Restoration": "दुरुस्ती"
+    }
+  },
+  hi: {
+    nav: {
+      home: "होम",
+      styles: "AI स्टाइल्स",
+      howItWorks: "यह कैसे काम करता है",
+      guide: "फोटो गाइड",
+      orderWhatsApp: "WhatsApp पर ऑर्डर करें",
+    },
+    hero: {
+      eyebrow: "परंडा का AI फोटो स्टूडियो",
+      title1: "अपने पलों को बदलें",
+      title2: "अद्भुत यादों में",
+      desc: "बच्चों, शादियों, त्योहारों और पेशेवर प्रोफाइल के लिए प्रोफेशनल AI फोटो एडिटिंग और क्रिएटिव पोर्ट्रेट्स।",
+      viewStyles: "AI स्टाइल्स देखें",
+      metrics: {
+        styles: "AI स्टाइल्स",
+        delivery: "फास्ट डिलीवरी",
+        price: "शुरुआती कीमत",
+        upi: "स्वीकार किए जाते हैं",
+      },
+      before: "पहले",
+      after: "बाद में (AI)",
+    },
+    catalog: {
+      title: "लोकप्रिय AI फोटो स्टाइल्स",
+      desc: "अपनी पसंदीदा स्टाइल चुनें। हमें अपना फोटो WhatsApp पर भेजें। हम इसे आपके लिए बनाएंगे।",
+      empty: "इस कैटेगरी में अभी कोई स्टाइल उपलब्ध नहीं है।",
+      turnaround: "समय",
+      price: "कीमत",
+      order: "ऑर्डर करें",
+      modalMsg: "क्लिक करने पर WhatsApp खुलेगा। फिर आप हमें अपनी फोटो भेज सकते हैं।",
+    },
+    howItWorks: {
+      title: "यह कैसे काम करता है",
+      desc: "सरल, तेज़, और पूरी तरह से WhatsApp पर। किसी अकाउंट की आवश्यकता नहीं।",
+      step1: { title: "स्टाइल्स देखें", desc: "हमारे कैटलॉग से अपनी पसंदीदा AI फोटो स्टाइल चुनें।" },
+      step2: { title: "WhatsApp पर ऑर्डर", desc: "ऑर्डर शुरू करने के लिए WhatsApp बटन पर क्लिक करें।" },
+      step3: { title: "फोटो भेजें", desc: "अपनी एक साफ फोटो सीधे WhatsApp पर भेजें।" },
+      step4: { title: "हम बनाएंगे", desc: "हमारा स्टूडियो प्रोफेशनल AI एडिटिंग करेगा।" },
+      step5: { title: "फोटो प्राप्त करें", desc: "शेयर या प्रिंट करने के लिए हाई क्वालिटी फोटो प्राप्त करें।" },
+    },
+    guide: {
+      title: "सही फोटो भेजें",
+      desc: "एक अच्छी फोटो देने से AI रिज़ल्ट बहुत बेहतर आता है। कृपया इन सरल निर्देशों का पालन करें।",
+      good: "सही",
+      avoid: "बचें",
+      good1: "सीधे कैमरे की तरफ देखता हुआ साफ चेहरा",
+      good2: "अच्छी रोशनी (चेहरे पर छाया नहीं होनी चाहिए)",
+      good3: "हाई रेजोल्यूशन (साफ फोटो)",
+      good4: "अलग-अलग एंगल से ली गई तस्वीरें (सुझाया गया)",
+      avoid1: "धुंधली या हिलती हुई तस्वीरें",
+      avoid2: "चश्मा या चेहरा ढका हुआ",
+      avoid3: "साइड से लिया गया फोटो",
+      avoid4: "बहुत अधिक अंधेरे वाली तस्वीरें",
+      note: "नोट: एक ही व्यक्ति की 2-3 साफ तस्वीरें भेजने से चेहरा सटीक आने में मदद मिलती है।",
+    },
+    testimonials: {
+      title: "खुश ग्राहक",
+      desc: "परंडा और आसपास के क्षेत्रों के लोगों का विश्वास।",
+    },
+    cta: {
+      title: "क्या आप अपना AI फोटो बनाने के लिए तैयार हैं?",
+      desc: "अपनी पसंदीदा स्टाइल चुनें और सीधे WhatsApp पर ऑर्डर करें।",
+      btn: "WhatsApp पर शुरू करें",
+    },
+    footer: {
+      quickLinks: "महत्वपूर्ण लिंक्स",
+      services: "सेवाएं",
+      visitUs: "पता",
+      msgUs: "मैसेज करें",
+      upi: "यहां UPI स्वीकार किया जाता है",
+      rights: "सभी अधिकार सुरक्षित।",
+      designed: "परंडा के लिए डिज़ाइन किया गया",
+    },
+    whatsapp: {
+      defaultMsg: "मुझे आपकी AI फोटो सेवाओं में रुचि है। कृपया अधिक जानकारी साझा करें।\n\nधन्यवाद।",
+      hello: "नमस्ते मोना फोटो स्टूडियो,\n\nमुझे यह AI फोटो स्टाइल चाहिए:\n\n",
+      styleId: "स्टाइल आईडी:",
+      style: "स्टाइल:",
+      price: "कीमत: ₹",
+      footer: "\n\nमैं अपनी फोटो अभी भेज रहा/रही हूँ।\n\nधन्यवाद।",
+    },
+    categories: {
+      "All": "सभी",
+      "Baby & Kids": "बच्चे",
+      "Royal": "रॉयल",
+      "Profession": "प्रोफेशन",
+      "Wedding": "शादी",
+      "Festival": "त्योहार",
+      "Maternity": "मैटरनिटी",
+      "Sketch": "स्केच",
+      "Restoration": "मरम्मत"
+    }
+  }
+};
+
+// Utility to recursively get keys (useful if we wanted to type-check)
+type PathsToStringProps<T> = T extends string ? [] : {
+  [K in Extract<keyof T, string>]: [K, ...PathsToStringProps<T[K]>]
+}[Extract<keyof T, string>];
+type Join<T extends string[], D extends string> =
+  T extends [] ? never :
+  T extends [infer F] ? F :
+  T extends [infer F, ...infer R] ?
+  F extends string ? 
+  R extends string[] ? 
+  `${F}${D}${Join<R, D>}` : never : never : never;
+
+export type TranslationKey = Join<PathsToStringProps<typeof translations.en>, "."> | string;

@@ -5,6 +5,7 @@ export interface Style {
   category: Category;
   name: string;
   marathiName?: string;
+  hindiName?: string;
   description: string;
   price: number;
   turnaround: string;

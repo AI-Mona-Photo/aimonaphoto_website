@@ -6,6 +6,7 @@ import { BeforeAfterSlider } from "./BeforeAfterSlider";
 import { buildWhatsAppURL } from "@/lib/whatsapp";
 import { MessageCircle, Clock } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useLanguage } from "@/lib/i18n/LanguageContext";
 
 interface StyleCardProps {
   styleData: Style;
@@ -13,10 +14,16 @@ interface StyleCardProps {
 }
 
 export function StyleCard({ styleData, onClick }: StyleCardProps) {
+  const { language, t } = useLanguage();
+
   const handleWhatsApp = (e: React.MouseEvent) => {
     e.stopPropagation();
-    window.open(buildWhatsAppURL(styleData), "_blank");
+    window.open(buildWhatsAppURL(language, styleData), "_blank");
   };
+
+  const displayName = language === "mr" && styleData.marathiName ? styleData.marathiName :
+                      language === "hi" && styleData.hindiName ? styleData.hindiName :
+                      styleData.name;
 
   return (
     <div 
@@ -28,6 +35,8 @@ export function StyleCard({ styleData, onClick }: StyleCardProps) {
           beforeImage={styleData.beforeImage} 
           afterImage={styleData.afterImage} 
           aspectRatio="portrait"
+          beforeLabel={t("hero.before")}
+          afterLabel={t("hero.after")}
         />
         {styleData.badge && (
           <div className="absolute bottom-4 left-4 z-10 bg-amber-500 text-white text-xs font-bold px-2 py-1 rounded shadow-md uppercase tracking-wider">
@@ -40,14 +49,11 @@ export function StyleCard({ styleData, onClick }: StyleCardProps) {
         <div className="flex justify-between items-start mb-2">
           <div>
             <div className="text-xs text-stone-500 font-medium tracking-wider uppercase mb-1">
-              {styleData.id} • {styleData.category}
+              {styleData.id} • {t(`categories.${styleData.category}` as any)}
             </div>
             <h3 className="font-serif text-xl font-medium text-stone-900 leading-tight">
-              {styleData.name}
+              {displayName}
             </h3>
-            {styleData.marathiName && (
-              <h4 className="text-stone-600 text-sm mt-0.5">{styleData.marathiName}</h4>
-            )}
           </div>
           <div className="text-right">
             <div className="font-semibold text-lg text-emerald-700">₹{styleData.price}</div>
@@ -71,7 +77,7 @@ export function StyleCard({ styleData, onClick }: StyleCardProps) {
             )}
           >
             <MessageCircle className="w-4 h-4" />
-            <span>Order</span>
+            <span>{t("catalog.order")}</span>
           </button>
         </div>
       </div>

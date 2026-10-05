@@ -1,9 +1,12 @@
-
+"use client";
 
 import React from "react";
 import { Star } from "lucide-react";
+import { useLanguage } from "@/lib/i18n/LanguageContext";
 
 export function Testimonials() {
+  const { t } = useLanguage();
+
   const reviews = [
     {
       id: 1,
@@ -31,13 +34,13 @@ export function Testimonials() {
         
         <div className="text-center max-w-2xl mx-auto mb-16">
           <h2 className="font-serif text-3xl md:text-4xl font-medium text-stone-900 mb-4">
-            Happy Customers
+            {t("testimonials.title")}
           </h2>
           <div className="flex justify-center gap-1 mb-4">
             {[1,2,3,4,5].map(i => <Star key={i} className="w-5 h-5 fill-amber-400 text-amber-400" />)}
           </div>
           <p className="text-stone-600 text-lg">
-            Trusted by people across Paranda and nearby regions.
+            {t("testimonials.desc")}
           </p>
         </div>
 

@@ -7,10 +7,12 @@ import { StyleCard } from "../ui/StyleCard";
 import { StyleModal } from "../ui/StyleModal";
 import { Style, Category } from "@/types/studio";
 import { motion, AnimatePresence } from "framer-motion";
+import { useLanguage } from "@/lib/i18n/LanguageContext";
 
 export function StyleCatalog() {
   const [activeCategory, setActiveCategory] = useState<Category>("All");
   const [selectedStyle, setSelectedStyle] = useState<Style | null>(null);
+  const { t } = useLanguage();
 
   const filteredStyles = activeCategory === "All" 
     ? stylesData 
@@ -22,10 +24,10 @@ export function StyleCatalog() {
         
         <div className="text-center max-w-2xl mx-auto mb-12">
           <h2 className="font-serif text-3xl md:text-4xl font-medium text-stone-900 mb-4">
-            Popular AI Photo Styles
+            {t("catalog.title")}
           </h2>
           <p className="text-stone-600 text-lg">
-            Choose a style you love. Send us your photo on WhatsApp. We&apos;ll create it for you.
+            {t("catalog.desc")}
           </p>
         </div>
 
@@ -41,7 +43,7 @@ export function StyleCatalog() {
                   : "bg-white text-stone-600 border border-stone-200 hover:border-stone-300 hover:bg-stone-100"
               }`}
             >
-              {category}
+              {t(`categories.${category}` as any)}
             </button>
           ))}
         </div>
@@ -69,7 +71,7 @@ export function StyleCatalog() {
 
         {filteredStyles.length === 0 && (
           <div className="text-center py-20 text-stone-500">
-            No styles found in this category right now.
+            {t("catalog.empty")}
           </div>
         )}
 

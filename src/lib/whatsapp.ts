@@ -1,14 +1,21 @@
 import { Style } from "@/types/studio";
+import { translations } from "./i18n/translations";
+import { Language } from "./i18n/LanguageContext";
 
 const PHONE_NUMBER = "919423233213";
 
-export function buildWhatsAppURL(style?: Style): string {
-  let message = "Hello Mona Photo Studio,\n\n";
+export function buildWhatsAppURL(language: Language = "en", style?: Style): string {
+  const t = translations[language].whatsapp;
+  let message = "";
 
   if (style) {
-    message += `I want this AI photo style:\n\nStyle ID: ${style.id}\nStyle: ${style.name}\nPrice shown: ₹${style.price}\n\nI will send my original photo now.\n\nThank you.`;
+    const styleName = language === "mr" && style.marathiName ? style.marathiName : 
+                      language === "hi" && style.hindiName ? style.hindiName : 
+                      style.name;
+
+    message = `${t.hello}${t.styleId} ${style.id}\n${t.style} ${styleName}\n${t.price}${style.price}${t.footer}`;
   } else {
-    message += "I am interested in your AI photo services. Please share more details.\n\nThank you.";
+    message = t.defaultMsg;
   }
 
   const encodedMessage = encodeURIComponent(message);

@@ -1,38 +1,41 @@
-
+"use client";
 
 import React from "react";
 import { Search, MessageCircle, ImageUp, Sparkles, ImageDown } from "lucide-react";
+import { useLanguage } from "@/lib/i18n/LanguageContext";
 
 export function HowItWorks() {
+  const { t } = useLanguage();
+
   const steps = [
     {
       num: "01",
-      title: "Browse Styles",
-      desc: "Look through our catalog and choose your favorite AI photo style.",
+      title: t("howItWorks.step1.title"),
+      desc: t("howItWorks.step1.desc"),
       icon: Search
     },
     {
       num: "02",
-      title: "Order on WhatsApp",
-      desc: "Click the WhatsApp button to start your order instantly.",
+      title: t("howItWorks.step2.title"),
+      desc: t("howItWorks.step2.desc"),
       icon: MessageCircle
     },
     {
       num: "03",
-      title: "Send Your Photo",
-      desc: "Send us a clear photo of yourself directly on WhatsApp.",
+      title: t("howItWorks.step3.title"),
+      desc: t("howItWorks.step3.desc"),
       icon: ImageUp
     },
     {
       num: "04",
-      title: "We Create",
-      desc: "Our studio manually applies professional AI transformations.",
+      title: t("howItWorks.step4.title"),
+      desc: t("howItWorks.step4.desc"),
       icon: Sparkles
     },
     {
       num: "05",
-      title: "Get Your Photo",
-      desc: "Receive your high-quality digital photo ready for sharing or printing.",
+      title: t("howItWorks.step5.title"),
+      desc: t("howItWorks.step5.desc"),
       icon: ImageDown
     }
   ];
@@ -42,10 +45,10 @@ export function HowItWorks() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center max-w-2xl mx-auto mb-16">
           <h2 className="font-serif text-3xl md:text-4xl font-medium text-stone-100 mb-4">
-            How It Works
+            {t("howItWorks.title")}
           </h2>
           <p className="text-stone-400 text-lg">
-            Simple, fast, and entirely on WhatsApp. No accounts needed.
+            {t("howItWorks.desc")}
           </p>
         </div>
 
