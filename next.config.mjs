@@ -1,10 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
-  // Automatically use the repository name as basePath for GitHub Pages in production
-  basePath: process.env.NODE_ENV === 'production' ? '/aimonaphoto_website' : '',
+  ...(process.env.VERCEL ? {} : { output: 'export' }),
+  // Automatically use the repository name as basePath for GitHub Pages in production, but not on Vercel
+  basePath: (process.env.NODE_ENV === 'production' && !process.env.VERCEL) ? '/aimonaphoto_website' : '',
   images: {
-    unoptimized: true,
+    unoptimized: !process.env.VERCEL,
     remotePatterns: [
       {
         protocol: 'https',
