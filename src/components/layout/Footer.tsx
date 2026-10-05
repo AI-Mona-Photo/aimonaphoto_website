@@ -64,8 +64,15 @@ export function Footer() {
             <h4 className="text-stone-100 font-medium mb-4">{t("footer.visitUs")}</h4>
             <ul className="space-y-4 text-sm">
               <li className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 text-stone-500 flex-shrink-0" />
-                <span>{studioInfo.address}</span>
+                <MapPin className="w-5 h-5 text-stone-500 flex-shrink-0 mt-0.5" />
+                <a 
+                  href={studioInfo.mapsLink} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="hover:text-amber-500 transition-colors"
+                >
+                  {studioInfo.address}
+                </a>
               </li>
               <li className="flex items-start gap-3">
                 <Phone className="w-5 h-5 text-stone-500 flex-shrink-0" />
