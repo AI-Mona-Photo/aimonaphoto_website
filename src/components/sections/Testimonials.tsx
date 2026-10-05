@@ -26,15 +26,15 @@ export function Testimonials() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="flex overflow-x-auto pb-8 -mx-4 px-4 md:mx-0 md:px-0 gap-6 snap-x snap-mandatory hide-scrollbar">
           {reviews.map((review, idx) => (
-            <div key={idx} className="bg-white p-8 rounded-2xl shadow-sm border border-stone-200 relative">
+            <div key={idx} className="bg-white p-8 rounded-2xl shadow-sm border border-stone-200 relative min-w-[300px] md:min-w-[380px] flex-1 snap-center shrink-0 flex flex-col">
               <div className="text-4xl text-stone-200 font-serif absolute top-4 right-6">&quot;</div>
-              <p className="text-stone-700 mb-6 relative z-10">
+              <p className="text-stone-700 mb-6 relative z-10 flex-grow">
                 "{review.text}"
               </p>
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-stone-200 rounded-full flex items-center justify-center font-bold text-stone-600">
+              <div className="flex items-center gap-3 mt-auto">
+                <div className="w-10 h-10 bg-stone-200 rounded-full flex items-center justify-center font-bold text-stone-600 shrink-0">
                   {review.name.charAt(0)}
                 </div>
                 <div>

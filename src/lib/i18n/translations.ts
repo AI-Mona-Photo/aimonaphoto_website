@@ -61,7 +61,10 @@ export const translations = {
       reviews: [
         { name: "Ramesh M.", loc: "Paranda", text: "Made a beautiful royal portrait for my son's birthday. Very fast service on WhatsApp." },
         { name: "Sneha P.", loc: "Barshi", text: "The wedding couple edit looked completely real. Everyone in the family loved it. Great work!" },
-        { name: "Kishor K.", loc: "Osmanabad", text: "Restored my grandfather's old torn photo. Now it looks like it was taken yesterday. Thank you." }
+        { name: "Kishor K.", loc: "Osmanabad", text: "Restored my grandfather's old torn photo. Now it looks like it was taken yesterday. Thank you." },
+        { name: "Priya D.", loc: "Tuljapur", text: "The professional AI edit saved me a trip to the studio. Perfect for my LinkedIn profile!" },
+        { name: "Amit S.", loc: "Karmala", text: "Got the festival special edit for Diwali. Absolutely stunning quality and super affordable." },
+        { name: "Sunita G.", loc: "Paranda", text: "I was amazed at how easily I could order through WhatsApp. The baby photos look adorable." }
       ]
     },
     cta: {
@@ -160,7 +163,10 @@ export const translations = {
       reviews: [
         { name: "रमेश एम.", loc: "परांडा", text: "माझ्या मुलाच्या वाढदिवसासाठी खूप सुंदर रॉयल पोर्ट्रेट बनवले. WhatsApp वर अतिशय जलद सेवा मिळाली." },
         { name: "स्नेहा पी.", loc: "बार्शी", text: "लग्नाचा फोटो अगदी खराखुरा वाटत होता. घरातील सर्वांना खूप आवडला. उत्तम काम!" },
-        { name: "किशोर के.", loc: "उस्मानाबाद", text: "माझ्या आजोबांचा जुना फाटलेला फोटो एकदम नवीन सारखा करून दिला. खूप खूप धन्यवाद." }
+        { name: "किशोर के.", loc: "उस्मानाबाद", text: "माझ्या आजोबांचा जुना फाटलेला फोटो एकदम नवीन सारखा करून दिला. खूप खूप धन्यवाद." },
+        { name: "प्रिया डी.", loc: "तुळजापूर", text: "प्रोफेशनल AI फोटोमुळे स्टुडिओत जाण्याचा वेळ वाचला. माझ्या LinkedIn प्रोफाईलसाठी एकदम भारी!" },
+        { name: "अमित एस.", loc: "करमाळा", text: "दिवाळीसाठी स्पेशल फोटो बनवून घेतला. क्वालिटी खूपच छान आहे आणि परवडणारी पण आहे." },
+        { name: "सुनीता जी.", loc: "परांडा", text: "WhatsApp वरून ऑर्डर करणे इतके सोपे असेल वाटले नव्हते. लहान बाळाचे फोटो खूप गोंडस आलेत." }
       ]
     },
     cta: {
@@ -259,7 +265,10 @@ export const translations = {
       reviews: [
         { name: "रमेश एम.", loc: "परंडा", text: "मेरे बेटे के जन्मदिन के लिए बहुत सुंदर रॉयल पोर्ट्रेट बनाया। WhatsApp पर बहुत तेज़ सेवा मिली।" },
         { name: "स्नेहा पी.", loc: "बार्शी", text: "शादी की फोटो बिल्कुल असली लग रही थी। घर में सबको बहुत पसंद आई। बढ़िया काम!" },
-        { name: "किशोर के.", loc: "उस्मानाबाद", text: "मेरे दादाजी की पुरानी फटी हुई तस्वीर बिल्कुल नई जैसी कर दी। बहुत-बहुत धन्यवाद।" }
+        { name: "किशोर के.", loc: "उस्मानाबाद", text: "मेरे दादाजी की पुरानी फटी हुई तस्वीर बिल्कुल नई जैसी कर दी। बहुत-बहुत धन्यवाद।" },
+        { name: "प्रिया डी.", loc: "तुलजापुर", text: "प्रोफेशनल AI फोटो से स्टूडियो जाने का समय बच गया। मेरे LinkedIn प्रोफाइल के लिए एकदम सही!" },
+        { name: "अमित एस.", loc: "करमाला", text: "दिवाली के लिए स्पेशल फोटो बनवाया। क्वालिटी बहुत ही शानदार और किफायती है।" },
+        { name: "सुनीता जी.", loc: "परंडा", text: "WhatsApp से ऑर्डर करना इतना आसान होगा, सोचा नहीं था। बच्चे की तस्वीरें बहुत प्यारी हैं।" }
       ]
     },
     cta: {
