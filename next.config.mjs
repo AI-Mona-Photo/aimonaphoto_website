@@ -1,8 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
-  // Optional: Add basePath if you don't use a custom domain
-  // basePath: '/aimonaphoto_website',
+  // Automatically use the repository name as basePath for GitHub Pages in production
+  basePath: process.env.NODE_ENV === 'production' ? '/aimonaphoto_website' : '',
   images: {
     unoptimized: true,
     remotePatterns: [
