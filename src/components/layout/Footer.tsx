@@ -29,9 +29,22 @@ export function Footer() {
               {studioInfo.description}
             </p>
             {studioInfo.upiAccepted && (
-              <div className="inline-flex items-center gap-2.5 bg-stone-900 px-3 py-2 rounded-lg text-xs font-medium border border-stone-800">
-                <img src="/images/upi-logo.svg" alt="UPI Accepted" className="h-3.5 w-auto" />
-                <span>{t("footer.upi")}</span>
+              <div className="flex flex-col gap-3">
+                <div className="inline-flex items-center gap-2.5 bg-stone-900 w-fit px-3 py-2 rounded-lg text-xs font-medium border border-stone-800">
+                  <img src="/images/upi-logo.svg" alt="UPI Accepted" className="h-3.5 w-auto" />
+                  <span>{t("footer.upi")}</span>
+                </div>
+                <div className="flex items-center gap-2 mt-1">
+                  <div className="bg-stone-100 px-2 py-1 rounded-md flex items-center justify-center h-7">
+                    <img src="/images/gpay-logo.svg" alt="Google Pay" className="h-3.5 w-auto" />
+                  </div>
+                  <div className="bg-stone-100 px-2 py-1 rounded-md flex items-center justify-center h-7">
+                    <img src="/images/phonepe-logo.svg" alt="PhonePe" className="h-3.5 w-auto" />
+                  </div>
+                  <div className="bg-stone-100 px-2 py-1 rounded-md flex items-center justify-center h-7">
+                    <img src="/images/paytm-logo.svg" alt="Paytm" className="h-2.5 w-auto" />
+                  </div>
+                </div>
               </div>
             )}
           </div>
