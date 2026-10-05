@@ -29,9 +29,9 @@ export function Footer() {
               {studioInfo.description}
             </p>
             {studioInfo.upiAccepted && (
-              <div className="inline-flex items-center gap-2 bg-stone-900 px-3 py-1.5 rounded text-xs font-medium border border-stone-800">
-                <span className="w-2 h-2 rounded-full bg-emerald-500"></span>
-                {t("footer.upi")}
+              <div className="inline-flex items-center gap-2.5 bg-stone-900 px-3 py-2 rounded-lg text-xs font-medium border border-stone-800">
+                <img src="/images/upi-logo.svg" alt="UPI Accepted" className="h-3.5 w-auto" />
+                <span>{t("footer.upi")}</span>
               </div>
             )}
           </div>
