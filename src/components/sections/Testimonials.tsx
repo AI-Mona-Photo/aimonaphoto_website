@@ -3,30 +3,12 @@
 import React from "react";
 import { Star } from "lucide-react";
 import { useLanguage } from "@/lib/i18n/LanguageContext";
+import { translations } from "@/lib/i18n/translations";
 
 export function Testimonials() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
-  const reviews = [
-    {
-      id: 1,
-      name: "Ramesh M.",
-      location: "Paranda",
-      text: "Made a beautiful royal portrait for my son's birthday. Very fast service on WhatsApp.",
-    },
-    {
-      id: 2,
-      name: "Sneha P.",
-      location: "Barshi",
-      text: "The wedding couple edit looked completely real. Everyone in the family loved it. Great work!",
-    },
-    {
-      id: 3,
-      name: "Kishor K.",
-      location: "Osmanabad",
-      text: "Restored my grandfather's old torn photo. Now it looks like it was taken yesterday. Thank you.",
-    }
-  ];
+  const reviews = translations[language].testimonials.reviews;
 
   return (
     <section className="py-20 bg-stone-100">
@@ -45,8 +27,8 @@ export function Testimonials() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {reviews.map((review) => (
-            <div key={review.id} className="bg-white p-8 rounded-2xl shadow-sm border border-stone-200 relative">
+          {reviews.map((review, idx) => (
+            <div key={idx} className="bg-white p-8 rounded-2xl shadow-sm border border-stone-200 relative">
               <div className="text-4xl text-stone-200 font-serif absolute top-4 right-6">&quot;</div>
               <p className="text-stone-700 mb-6 relative z-10">
                 "{review.text}"
@@ -57,7 +39,7 @@ export function Testimonials() {
                 </div>
                 <div>
                   <div className="font-medium text-stone-900">{review.name}</div>
-                  <div className="text-xs text-stone-500">{review.location}</div>
+                  <div className="text-xs text-stone-500">{review.loc}</div>
                 </div>
               </div>
             </div>

@@ -58,6 +58,11 @@ export const translations = {
     testimonials: {
       title: "Happy Customers",
       desc: "Trusted by people across Paranda and nearby regions.",
+      reviews: [
+        { name: "Ramesh M.", loc: "Paranda", text: "Made a beautiful royal portrait for my son's birthday. Very fast service on WhatsApp." },
+        { name: "Sneha P.", loc: "Barshi", text: "The wedding couple edit looked completely real. Everyone in the family loved it. Great work!" },
+        { name: "Kishor K.", loc: "Osmanabad", text: "Restored my grandfather's old torn photo. Now it looks like it was taken yesterday. Thank you." }
+      ]
     },
     cta: {
       title: "Ready to Create Your AI Photo?",
@@ -152,6 +157,11 @@ export const translations = {
     testimonials: {
       title: "आनंदी ग्राहक",
       desc: "परांडा आणि परिसरातील लोकांचा विश्वास.",
+      reviews: [
+        { name: "रमेश एम.", loc: "परांडा", text: "माझ्या मुलाच्या वाढदिवसासाठी खूप सुंदर रॉयल पोर्ट्रेट बनवले. WhatsApp वर अतिशय जलद सेवा मिळाली." },
+        { name: "स्नेहा पी.", loc: "बार्शी", text: "लग्नाचा फोटो अगदी खराखुरा वाटत होता. घरातील सर्वांना खूप आवडला. उत्तम काम!" },
+        { name: "किशोर के.", loc: "उस्मानाबाद", text: "माझ्या आजोबांचा जुना फाटलेला फोटो एकदम नवीन सारखा करून दिला. खूप खूप धन्यवाद." }
+      ]
     },
     cta: {
       title: "तुमचा AI फोटो तयार करण्यास उत्सुक आहात?",
@@ -246,6 +256,11 @@ export const translations = {
     testimonials: {
       title: "खुश ग्राहक",
       desc: "परंडा और आसपास के क्षेत्रों के लोगों का विश्वास।",
+      reviews: [
+        { name: "रमेश एम.", loc: "परंडा", text: "मेरे बेटे के जन्मदिन के लिए बहुत सुंदर रॉयल पोर्ट्रेट बनाया। WhatsApp पर बहुत तेज़ सेवा मिली।" },
+        { name: "स्नेहा पी.", loc: "बार्शी", text: "शादी की फोटो बिल्कुल असली लग रही थी। घर में सबको बहुत पसंद आई। बढ़िया काम!" },
+        { name: "किशोर के.", loc: "उस्मानाबाद", text: "मेरे दादाजी की पुरानी फटी हुई तस्वीर बिल्कुल नई जैसी कर दी। बहुत-बहुत धन्यवाद।" }
+      ]
     },
     cta: {
       title: "क्या आप अपना AI फोटो बनाने के लिए तैयार हैं?",
