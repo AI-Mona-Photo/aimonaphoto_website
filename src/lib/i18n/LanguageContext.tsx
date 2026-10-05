@@ -15,26 +15,28 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
   const [language, setLanguageState] = useState<Language>("en");
-  const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
-    setIsClient(true);
-    const savedLang = localStorage.getItem("mona_language") as Language;
-    if (savedLang && ["en", "mr", "hi"].includes(savedLang)) {
-      setLanguageState(savedLang);
+    try {
+      const savedLang = localStorage.getItem("mona_language") as Language;
+      if (savedLang && ["en", "mr", "hi"].includes(savedLang)) {
+        setLanguageState(savedLang);
+      }
+    } catch (e) {
+      // Ignore localStorage errors (e.g. incognito mode)
     }
   }, []);
 
   const setLanguage = (lang: Language) => {
     setLanguageState(lang);
-    localStorage.setItem("mona_language", lang);
+    try {
+      localStorage.setItem("mona_language", lang);
+    } catch (e) {}
   };
 
   const t = (key: TranslationKey): string => {
-    // If not client yet, default to English to prevent hydration mismatch for simple text, 
-    // or just render the current state.
     const keys = key.split(".");
-    let current: any = translations[language];
+    let current: any = translations[language] || translations["en"];
     
     for (const k of keys) {
       if (current[k] === undefined) {
@@ -45,24 +47,6 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
     }
     return current as string;
   };
-
-  // Prevent hydration mismatch by rendering a subtle fade-in or just default english on first pass if needed.
-  // We will just let it hydrate; text mismatch is usually non-fatal but to be perfectly clean:
-  if (!isClient) {
-    return (
-      <LanguageContext.Provider value={{ language: "en", setLanguage, t: (k) => {
-        const keys = k.split(".");
-        let current: any = translations["en"];
-        for (const key of keys) {
-          if (current[key] === undefined) return k;
-          current = current[key];
-        }
-        return current;
-      } }}>
-        <div style={{ visibility: "hidden" }}>{children}</div>
-      </LanguageContext.Provider>
-    );
-  }
 
   return (
     <LanguageContext.Provider value={{ language, setLanguage, t }}>
