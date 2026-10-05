@@ -4,7 +4,8 @@ import React from "react";
 import { Style } from "@/types/studio";
 import { BeforeAfterSlider } from "./BeforeAfterSlider";
 import { buildWhatsAppURL } from "@/lib/whatsapp";
-import { MessageCircle, Clock } from "lucide-react";
+import { Clock } from "lucide-react";
+import { WhatsAppIcon } from "./icons/WhatsAppIcon";
 import { cn } from "@/lib/utils";
 import { useLanguage } from "@/lib/i18n/LanguageContext";
 
@@ -76,7 +77,7 @@ export function StyleCard({ styleData, onClick }: StyleCardProps) {
               "bg-emerald-600 text-white hover:bg-emerald-700"
             )}
           >
-            <MessageCircle className="w-4 h-4" />
+            <WhatsAppIcon className="w-4 h-4" />
             <span>{t("catalog.order")}</span>
           </button>
         </div>

@@ -3,7 +3,8 @@
 import React from "react";
 import { BeforeAfterSlider } from "../ui/BeforeAfterSlider";
 import { buildWhatsAppURL } from "@/lib/whatsapp";
-import { MessageCircle, ImageIcon, Zap, IndianRupee, ShieldCheck } from "lucide-react";
+import { ImageIcon, Zap, IndianRupee, ShieldCheck } from "lucide-react";
+import { WhatsAppIcon } from "../ui/icons/WhatsAppIcon";
 import { motion } from "framer-motion";
 import { useLanguage } from "@/lib/i18n/LanguageContext";
 
@@ -47,7 +48,7 @@ export function Hero() {
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-4 rounded-xl font-medium text-lg transition-all shadow-lg hover:shadow-emerald-900/20"
               >
-                <MessageCircle className="w-5 h-5" />
+                <WhatsAppIcon className="w-5 h-5" />
                 <span>{t("nav.orderWhatsApp")}</span>
               </a>
               <a

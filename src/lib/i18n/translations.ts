@@ -283,16 +283,4 @@ export const translations = {
   }
 };
 
-// Utility to recursively get keys (useful if we wanted to type-check)
-type PathsToStringProps<T> = T extends string ? [] : {
-  [K in Extract<keyof T, string>]: [K, ...PathsToStringProps<T[K]>]
-}[Extract<keyof T, string>];
-type Join<T extends string[], D extends string> =
-  T extends [] ? never :
-  T extends [infer F] ? F :
-  T extends [infer F, ...infer R] ?
-  F extends string ? 
-  R extends string[] ? 
-  `${F}${D}${Join<R, D>}` : never : never : never;
-
-export type TranslationKey = Join<PathsToStringProps<typeof translations.en>, "."> | string;
+export type TranslationKey = string;

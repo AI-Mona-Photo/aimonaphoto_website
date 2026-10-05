@@ -2,7 +2,8 @@
 
 import React from "react";
 import { studioInfo } from "@/data/studio";
-import { MapPin, Phone, Clock, MessageCircle } from "lucide-react";
+import { MapPin, Phone, Clock } from "lucide-react";
+import { WhatsAppIcon } from "../ui/icons/WhatsAppIcon";
 import { buildWhatsAppURL } from "@/lib/whatsapp";
 import { useLanguage } from "@/lib/i18n/LanguageContext";
 
@@ -81,7 +82,7 @@ export function Footer() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-stone-800 hover:bg-stone-700 text-stone-200 px-4 py-2 rounded-lg font-medium text-sm transition-colors mt-6 border border-stone-700"
             >
-              <MessageCircle className="w-4 h-4 text-emerald-500" />
+              <WhatsAppIcon className="w-4 h-4 text-emerald-500" />
               {t("footer.msgUs")}
             </a>
           </div>

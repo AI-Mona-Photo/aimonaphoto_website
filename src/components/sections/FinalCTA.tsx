@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { MessageCircle } from "lucide-react";
+import { WhatsAppIcon } from "../ui/icons/WhatsAppIcon";
 import { buildWhatsAppURL } from "@/lib/whatsapp";
 import { useLanguage } from "@/lib/i18n/LanguageContext";
 
@@ -27,7 +27,7 @@ export function FinalCTA() {
             rel="noopener noreferrer"
             className="flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-4 rounded-xl font-medium text-lg transition-all shadow-xl w-full sm:w-auto"
           >
-            <MessageCircle className="w-5 h-5" />
+            <WhatsAppIcon className="w-5 h-5" />
             <span>{t("cta.btn")}</span>
           </a>
         </div>

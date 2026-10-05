@@ -4,7 +4,8 @@ import React, { useEffect } from "react";
 import { Style } from "@/types/studio";
 import { BeforeAfterSlider } from "./BeforeAfterSlider";
 import { buildWhatsAppURL } from "@/lib/whatsapp";
-import { X, MessageCircle, Clock } from "lucide-react";
+import { X, Clock } from "lucide-react";
+import { WhatsAppIcon } from "./icons/WhatsAppIcon";
 import { motion, AnimatePresence } from "framer-motion";
 import { useLanguage } from "@/lib/i18n/LanguageContext";
 
@@ -102,7 +103,7 @@ export function StyleModal({ styleData, isOpen, onClose }: StyleModalProps) {
                 rel="noopener noreferrer"
                 className="w-full flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white py-4 px-6 rounded-xl font-medium text-lg transition-colors shadow-sm hover:shadow-md"
               >
-                <MessageCircle className="w-6 h-6" />
+                <WhatsAppIcon className="w-6 h-6" />
                 <span>{t("nav.orderWhatsApp")}</span>
               </a>
               <p className="text-xs text-center text-stone-500 mt-4">

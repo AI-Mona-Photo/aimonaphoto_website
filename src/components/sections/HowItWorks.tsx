@@ -1,7 +1,8 @@
 "use client";
 
 import React from "react";
-import { Search, MessageCircle, ImageUp, Sparkles, ImageDown } from "lucide-react";
+import { Search, ImageUp, Sparkles, ImageDown } from "lucide-react";
+import { WhatsAppIcon } from "../ui/icons/WhatsAppIcon";
 import { useLanguage } from "@/lib/i18n/LanguageContext";
 
 export function HowItWorks() {
@@ -18,7 +19,7 @@ export function HowItWorks() {
       num: "02",
       title: t("howItWorks.step2.title"),
       desc: t("howItWorks.step2.desc"),
-      icon: MessageCircle
+      icon: WhatsAppIcon
     },
     {
       num: "03",

@@ -1,7 +1,8 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { MessageCircle, Menu, X, Globe } from "lucide-react";
+import { Menu, X, Globe } from "lucide-react";
+import { WhatsAppIcon } from "@/components/ui/icons/WhatsAppIcon";
 import { buildWhatsAppURL } from "@/lib/whatsapp";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
@@ -90,7 +91,7 @@ export function Navbar() {
               rel="noopener noreferrer"
               className="flex items-center gap-1.5 bg-emerald-600 hover:bg-emerald-500 text-white px-5 py-2 rounded-lg font-medium text-sm transition-all"
             >
-              <MessageCircle className="w-4 h-4" />
+              <WhatsAppIcon className="w-4 h-4" />
               <span>{t("nav.orderWhatsApp")}</span>
             </a>
           </nav>
@@ -147,7 +148,7 @@ export function Navbar() {
             rel="noopener noreferrer"
             className="flex items-center justify-center gap-2 bg-emerald-600 text-white px-5 py-3 rounded-lg font-medium text-lg mt-4"
           >
-            <MessageCircle className="w-5 h-5" />
+            <WhatsAppIcon className="w-5 h-5" />
             <span>{t("nav.orderWhatsApp")}</span>
           </a>
         </div>
